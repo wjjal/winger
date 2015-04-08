@@ -26,7 +26,7 @@ public class LIS_DP {
 		System.out.println(max);
 	}
 	public static void main(String[] args){
-		int[] data= {7,8,1,2,3};
+		int[] data= {1,1,6,7,3};
 		LIS(data);
 	}
 }

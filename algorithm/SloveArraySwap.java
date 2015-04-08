@@ -6,34 +6,39 @@ package algorithm;
 
 public class SloveArraySwap {
 	public static void main(String[] args) {
-		int[] array = { 1,3,5,7,9,2,4,6,8,10 };
-		arraySwap(array, 0, array.length - 1);
-		for (int i : array) {
-			System.out.print(i + " ");
+		int[] a = { 1, 3, 5, 7, 9, 2, 4, 6, 8, 10 };
+		new SloveArraySwap().new Solution().arraySwap(a, 0, a.length - 1);
+		for (int i = 0; i < a.length; i++){
+			if (i == 0)
+				System.out.print(a[i]);
+			else
+				System.out.print("," + a[i]);
 		}
 	}
 
-	private static void arraySwap(int[] array, int start, int end) {
-		if (end - start <=1)
-			return;
-		int ls = start;
-		int le = (start + end) >> 1;
-		int rs = le + 1;
-		int re = end;
-		for (int i = (ls + le) / 2 + 1, j = rs; i <= le; i++, j++)
-			swap(array, i, j);
-		// 奇数个
-		if (le != ls && (le - ls) % 2 == 0) {
-			le++;
-			rs--;
+	class Solution {
+		public void arraySwap(int[] a, int start, int end) {
+			if (end - start <= 1)
+				return;
+			int ls = start;
+			int le = (start + end) >> 1;
+			int rs = le + 1;
+			int re = end;
+			for (int i = (ls + le) / 2 + 1, j = rs; i <= le; i++, j++)
+				swap(a, i, j);
+			// 奇数个
+			if (le != ls && (le - ls) % 2 == 0) {
+				le++;
+				rs--;
+			}
+			arraySwap(a, ls, le);
+			arraySwap(a, rs, re);
 		}
-		arraySwap(array, ls, le);
-		arraySwap(array, rs, re);
-	}
 
-	private static void swap(int[] array, int i, int j) {
-		int temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
+		private  void swap(int[] array, int i, int j) {
+			int temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
 	}
 }

@@ -1,7 +1,6 @@
 package algorithm;
 
 public class CallAllCombination {
-	private static int total;
 
 	public static void main(String[] args) {
 		String str[] = { "a", "b", "c", "d" };

@@ -11,14 +11,13 @@ public class BothLIS {
 		int[] doarray = new int[len];
 		int temp = 0;
 		System.out.println("Please input the array!");
-		for (int i = 0; i < len; i++) {
+		for(int i = 0; i < len; i++) {
 			temp = scan.nextInt();
 			array[i] = temp;
 			doarray[len - 1 - i] = temp;
 		}
 		int[] b = new int[len+1];
 		int[] c = new int[len+1];
-		int last = 0;
 		LIS(array, len, b);
 		LIS(doarray,len,c);
 		int max = 0;
@@ -27,6 +26,7 @@ public class BothLIS {
 				max = b[j] + c[len - j];
 		}
 		System.out.println(max);
+		scan.close();
 	}
 
 	static void LIS(int[] data, int len, int[] record) {

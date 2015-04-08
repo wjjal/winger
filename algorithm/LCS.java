@@ -1,6 +1,5 @@
 package algorithm;
 
-import java.util.Stack;
 
 //Longest Common Subsequence，最长公共子序列
 
@@ -20,7 +19,6 @@ public class LCS {
 	private static int LCS_Lehgth(String a, String b) {
 		int len_a = a.length();
 		int len_b = b.length();
-		int max = 0;
 		int[][] opt = new int[len_a + 1][len_b + 1];
 		StringBuilder[][] result = new StringBuilder[len_a + 1][len_b + 1];
 		for (int i = 0; i < len_a + 1; i++) {

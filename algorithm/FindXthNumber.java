@@ -1,5 +1,4 @@
 package algorithm;
-import java.util.ArrayList;
 
 //找出第k大的数字所在的位置。
 //写一段程序，找出数组中第k大小的数，输出数所在的位置。

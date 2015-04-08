@@ -1,7 +1,7 @@
 package algorithm;
 
 public class Fibonacci {
-	static int Fibonacci(int n) {
+	static int fibonacci(int n) {
 		if (n == 0)
 			return 0;
 		if (n == 1)
@@ -51,7 +51,7 @@ public class Fibonacci {
 
 	public static void main(String[] args) {
 		int n = 8;
-		System.out.println(Fibonacci(n));
+		System.out.println(fibonacci(n));
 		int result[] = { 0, 1 };
 		if (n < 2)
 			System.out.println(result[n]);

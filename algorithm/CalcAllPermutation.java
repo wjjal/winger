@@ -10,7 +10,7 @@ public class CalcAllPermutation {
 		callAllPermutation1(perm1);
 		System.out.println("total:" + total);
 		total = 0;
-		char[] perm2 = { 'a', 'b', 'c', 'd' };
+		//char[] perm2 = { 'a', 'b', 'c', 'd' };
 		//callAllPermutation2(perm2, 0, perm2.length - 1);
 		//System.out.println("total:" + total);
 	}
@@ -40,7 +40,6 @@ public class CalcAllPermutation {
 				System.out.print(c);
 			System.out.println();
 			total++;
-			int a = 0;
 		}
 	}
 	
@@ -63,7 +62,6 @@ public class CalcAllPermutation {
 	}
 
 	private static void reverse(char[] data, int k) {
-		char temp;
 		int len = data.length, i = 0;
 		while (k + i < len - 1 - i) {
 			swap(data, k + i, len - 1 - i);

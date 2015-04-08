@@ -6,7 +6,7 @@ package algorithm;
 public class FindContinuousSequence {
 	public static void main(String[] args) {
 		int n = 15;
-		findContinuousSequence(15);
+		findContinuousSequence(n);
 	}
 
 	static void findContinuousSequence(int n) {

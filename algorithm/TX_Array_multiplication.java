@@ -8,24 +8,30 @@ package algorithm;
 
 public class TX_Array_multiplication {
 	public static void main(String[] args) {
-		int[] A = { 1, 2, 3, 4, 5 };
-		array_multiplication(A);
+		int[] A = { 0,1,3,5,7 };
+		int[] b = new TX_Array_multiplication().new Solution()
+				.array_multiplication(A);
+		for (int i = 0; i < b.length; i++)
+			if (i == 0)
+				System.out.print(b[i]);
+			else
+				System.out.print("," + b[i]);
 	}
 
-	private static void array_multiplication(int[] a) {
-		int n = a.length;
-		int[] b = new int[n];
-		for (int i = 0; i < n; i++)
-			b[i] = 1;
-		int left = 1, right = 1;
-		for (int i = 0; i < a.length; i++) {
-			b[i] *= left;
-			b[n - i - 1] *= right;
-			left *= a[i];
-			right *= a[n - i - 1];
-		}
-		for (int k : b) {
-			System.out.print(k + " ");
+	public class Solution {
+		public int[] array_multiplication(int[] a) {
+			int n = a.length;
+			int[] b = new int[n];
+			for (int i = 0; i < n; i++)
+				b[i] = 1;
+			int left = 1, right = 1;
+			for (int i = 0; i < a.length; i++) {
+				b[i] *= left;
+				b[n - i - 1] *= right;
+				left *= a[i];
+				right *= a[n - i - 1];
+			}
+			return b;
 		}
 	}
 }
